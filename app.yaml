@@ -1,0 +1,21 @@
+runtime: php55
+api_version: 1
+
+beta_settings:
+      cloud_sql_instances: "faizandb-218421:asia-south1:faizandb"
+
+handlers:
+- url: /(.+\.php)$
+  script: \1
+
+- url: /login/style.css
+  static_files: /login/style.css
+
+
+
+env_variables:
+  # Replace USER, PASSWORD, DATABASE, and CONNECTION_NAME with the
+  # values obtained when configuring your Cloud SQL instance.
+  MYSQL_DSN: 'mysql:unix_socket=/cloudsql/faizandb-218421:asia-south1:faizandb;dbname=crud'
+  MYSQL_USER: 'root'
+  MYSQL_PASSWORD: ''
