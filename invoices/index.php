@@ -42,7 +42,7 @@
 </div>
 
 </div>
-	<div style="height:30px;"></div>
+	<div style="height:150px;"></div>
 	<div class = "row">	
 		<div class = "col-md-1">
 		</div>
