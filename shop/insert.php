@@ -29,19 +29,21 @@ $coordinates = $_REQUEST['coordinates'];
 </head>
 <body>
 <div class="form">
-<p><a href="../login/index.php">Home</a> 
+<p><a href="../index.php">Home</a> 
 | <a href="view.php">View Records</a> 
-| <a href="../login/logout.php">Logout</a></p>
+| <a href="../logout.php">Logout</a></p>
 <div>
 <h1>Insert New Record</h1>
-<form name="form" method="post" action=""> 
+<form name="form" method="post" action="insert.php"> 
 <input type="hidden" name="new" value="1" />
 <p><input type="text" name="shop_name" placeholder="shop_name" required /></p>
-<p><input type="text" name="contact_person" placeholder="contact_person" required /></p>
+<p><input type="text" name="contact_person" placeholder="Enter contact_person" required /></p>
 <p><input type="text" name="contact_no" placeholder="Enter contact_no" required /></p>
 <p><input type="text" name="address" placeholder="Enter address" required /></p>
-<p><input type="text" name="coordinates" placeholder="coordinates" required /></p>
-<p><input type="text" name="sales_price" placeholder="Enter sales price" required /></p>
+<p><input type="text" name="coordinates" placeholder="Enter coordinates" required /></p>
+<p><input type="text" name="area" placeholder="Enter area" required /></p>
+
+
 <p><input name="submit" type="submit" value="Submit" /></p>
 </form>
 <p style="color:#FF0000;"><?php echo $status; ?></p>

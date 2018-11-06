@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Login</title>
-<link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
 <?php
 include('db.php');
 session_start();
@@ -24,7 +16,7 @@ AND password='$password'";
         if(mysqli_num_rows($result) == 1){
 	    $_SESSION['username'] = $username;
 	    header("Location: index.php");
-         }
+	   }
 else{
 	echo "<div class='form'>
 <h3>Username/password is incorrect.</h3>
@@ -32,6 +24,13 @@ else{
 	}
     }
 ?>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
 <div class="form">
 <h1>Log In</h1>
 <form action = "login.php" method="post" name="login">

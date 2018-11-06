@@ -7,18 +7,33 @@ include("auth.php");
 <head>
 <meta charset="utf-8">
 <title>View Records</title>
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="new.css" />
+
 </head>
 <body>
-<div class="form">
-<p><a href="../login/index.php">Home</a> 
-| <a href="insert.php">Insert New Record</a> 
-| <a href="../login/logout.php">Logout</a></p>
-<h2>View Records</h2>
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    
+    <div class="w3-col s3">
+      <a href="../index.php" class="w3-button w3-block w3-green">HOME</a>
+    </div>
+    <div class="w3-col s9">
+      <a href="insert.php" class="w3-button w3-block w3-green">Insert New Record</a>
+    </div>
+    <div class="w3-col s9" align="center">
+    <a href="logout.php" class="del_btn";">LOGOUT</a>
+    </div>
+    
+  </div>
+</div>
+
+</div>
+
+<h2 style="margin-top: 150px">View Records</h2>
 <table width="100%" border="1" style="border-collapse:collapse;">
 <thead>
 <tr>
-<th><strong>S.No</strong></th>
 <th><strong>product_id</strong></th>
 <th><strong>brand</strong></th>
 <th><strong>type</strong></th>
@@ -31,12 +46,11 @@ include("auth.php");
 </thead>
 <tbody>
 <?php
-$count=1;
 $sel_query="Select * from product_13027 ORDER BY id desc;";
 $result = mysqli_query($con,$sel_query);
 while($row = mysqli_fetch_assoc($result)) { ?>
-<tr><td align="center"><?php echo $count; ?></td>
-<td align="center"><?php echo $row["product_code"]; ?></td>
+<tr>
+<td align="center"><?php echo $row["id"]; ?></td>
 <td align="center"><?php echo $row["brand"]; ?></td>
 <td align="center"><?php echo $row["type"]; ?></td>
 <td align="center"><?php echo $row["shade"]; ?></td>
@@ -49,7 +63,7 @@ while($row = mysqli_fetch_assoc($result)) { ?>
 <a href="delete.php?id=<?php echo $row["id"]; ?>">Delete</a>
 </td>
 </tr>
-<?php $count++; } ?>
+<?php  } ?>
 </tbody>
 </table>
 </div>

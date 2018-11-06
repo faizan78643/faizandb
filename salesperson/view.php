@@ -7,13 +7,34 @@ include("auth.php");
 <head>
 <meta charset="utf-8">
 <title>View Records</title>
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="new.css" />
+
 </head>
 <body>
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col">
+      <a href="./shop/view.phpHomePage.php" class="w3-button w3-block w3-green">SHOP</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="../index.php" class="w3-button w3-block w3-green">HOME</a>
+    </div>
+    <div class="w3-col s9">
+      <a href="insert.php" class="w3-button w3-block w3-green">Insert New Record</a>
+    </div>
+    <div class="w3-col s9" align="center">
+    <a href="logout.php" class="del_btn";">LOGOUT</a>
+    </div>
+    
+  </div>
+</div>
+
+</div>
 <div class="form">
-<p><a href="../login/index.php">Home</a> 
+<p><a href="../index.php">Home</a> 
 | <a href="insert.php">Insert New Record</a> 
-| <a href="../login/logout.php">Logout</a></p>
+| <a href="../logout.php">Logout</a></p>
 <h2>View Records</h2>
 <table width="100%" border="1" style="border-collapse:collapse;">
 <thead>

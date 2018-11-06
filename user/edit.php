@@ -27,9 +27,11 @@ $id=$_REQUEST['id'];
 
 $username =$_REQUEST['username'];
 $password =$_REQUEST['password'];
+$admin= $_REQUEST['admin'];
+
 
 //$submittedby = $_SESSION["username"];
-$update="update users set username= '$username', password = '$password' ";
+$update="update users set username= '$username', password = '$password',admin='$admin' where id='$id' ";
 mysqli_query($con, $update) or die(mysqli_error());
 $status = "Record Updated Successfully. </br></br>
 <a href='view.php'>View Updated Record</a>";
@@ -44,6 +46,8 @@ echo '<p style="color:#FF0000;">'.$status.'</p>';
 required value="<?php echo $row['username'];?>" /></p>
 <p><input type="text" name="password" placeholder="Enter password" 
 required value="<?php echo $row['password'];?>" /></p>
+<p><input type="text" name="admin" placeholder="Enter admin" 
+required value="<?php echo $row['admin'];?>" /></p>
 
 <p><input name="submit" type="submit" value="Update" /></p>
 </form>

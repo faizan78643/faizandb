@@ -9,8 +9,8 @@ if(isset($_POST['new']) && $_POST['new']==1){
 
    // $submittedby = $_SESSION["username"];
     $ins_query="insert into users
-    (`username`,`password`)values
-    ('$username','$password')";
+    (`username`,`password`,`admin`)values
+    ('$username','$password','$admin')";
     mysqli_query($con,$ins_query)
     or die(mysql_error());
     $status = "New Record Inserted Successfully.
@@ -26,15 +26,16 @@ if(isset($_POST['new']) && $_POST['new']==1){
 </head>
 <body>
 <div class="form">
-<p><a href="../login/index.php">Home</a> 
+<p><a href="../index.php">Home</a> 
 | <a href="view.php">View Records</a> 
-| <a href="../login/logout.php">Logout</a></p>
+| <a href="../logout.php">Logout</a></p>
 <div>
 <h1>Insert New Record</h1>
-<form name="form" method="post" action=""> 
+<form name="form" method="post" action="insert.php"> 
 <input type="hidden" name="new" value="1" />
 <p><input type="text" name="username" placeholder="Enter username" required /></p>
 <p><input type="text" name="password" placeholder="password" required /></p>
+<p><input type="text" name="admin" placeholder="Enter admin" required /></p>
 
 <p><input name="submit" type="submit" value="Submit" /></p>
 </form>

@@ -29,19 +29,19 @@ $sales_price = $_REQUEST['sales_price'];
 </head>
 <body>
 <div class="form">
-<p><a href="../login/index.php">Home</a> 
+<p><a href="../index.php">Home</a> 
 | <a href="view.php">View Records</a> 
-| <a href="../login/logout.php">Logout</a></p>
+| <a href="../logout.php">Logout</a></p>
 <div>
 <h1>Insert New Record</h1>
-<form name="form" method="post" action=""> 
+<form name="form" method="post" action="insert.php"> 
 <input type="hidden" name="new" value="1" />
 <p><input type="text" name="product_code" placeholder="product code" required /></p>
 <p><input type="text" name="brand" placeholder="brand" required /></p>
 <p><input type="text" name="type" placeholder="Enter type" required /></p>
 <p><input type="text" name="shade" placeholder="Enter shade" required /></p>
 <p><input type="text" name="size" placeholder="Enter size" required /></p>
-<p><input type="text" name="sales_price" placeholder="Enter sales price" required /></p>
+<p><input type="number" name="sales_price" placeholder="Enter sales price" required /></p>
 <p><input name="submit" type="submit" value="Submit" /></p>
 </form>
 <p style="color:#FF0000;"><?php echo $status; ?></p>

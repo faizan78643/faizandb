@@ -25,14 +25,14 @@ if(isset($_POST['new']) && $_POST['new']==1)
 {
 $id=$_REQUEST['id'];
 
-$product_code =$_REQUEST['product_code'];
+//$product_code =$_REQUEST['product_code'];
 $brand =$_REQUEST['brand'];
 $type =$_REQUEST['type'];
 $shade =$_REQUEST['shade'];
 $size =$_REQUEST['size'];
 $sales_price=$_REQUEST['sales_price'];
 //$submittedby = $_SESSION["username"];
-$update="update product_13027 set product_code= '$product_code', brand = '$brand', type = '$type', shade = '$shade', size = '$size', sales_price = '$sales_price' where id = '$id'";
+$update="update product_13027 set  brand = '$brand', type = '$type', shade = '$shade', size = '$size', sales_price = '$sales_price' where id = '$id'";
 mysqli_query($con, $update) or die(mysqli_error());
 $status = "Record Updated Successfully. </br></br>
 <a href='view.php'>View Updated Record</a>";
@@ -42,9 +42,8 @@ echo '<p style="color:#FF0000;">'.$status.'</p>';
 <div>
 <form name="form" method="post" action=""> 
 <input type="hidden" name="new" value="1" />
-<input name="id" type="hidden" value="<?php echo $row['id'];?>" />
 <p><input type="text" name="product_code" placeholder="Enter Product code" 
-required value="<?php echo $row['product_code'];?>" /></p>
+required value="<?php echo $row['id'];?>" /></p>
 <p><input type="text" name="brand" placeholder="Enter brand" 
 required value="<?php echo $row['brand'];?>" /></p>
 <p><input type="text" name="type" placeholder="Enter type" 
