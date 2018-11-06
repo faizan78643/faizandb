@@ -35,7 +35,7 @@
       <a href="./invoices/index.php" class="w3-button w3-block w3-green">INVOICES</a>
     </div>
     <div class="w3-col" align="center">
-    <a href="logout.php" class="del_btn";">LOGOUT</a>
+    <a href="../logout.php" class="del_btn";">LOGOUT</a>
     </div>
     
   </div>

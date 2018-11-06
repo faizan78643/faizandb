@@ -25,7 +25,7 @@ include("auth.php");
       <a href="insert.php" class="w3-button w3-block w3-green">Insert New Record</a>
     </div>
     <div class="w3-col s9" align="center">
-    <a href="logout.php" class="del_btn";">LOGOUT</a>
+    <a href="../logout.php" class="del_btn";">LOGOUT</a>
     </div>
     
   </div>
