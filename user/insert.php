@@ -6,17 +6,20 @@ if(isset($_POST['new']) && $_POST['new']==1){
     
     $username =$_REQUEST['username'];
     $password = $_REQUEST['password'];
-
+    $admin = $_REQUEST['admin'];
    // $submittedby = $_SESSION["username"];
-    $ins_query="insert into users
-    (`username`,`password`,`admin`)values
+    $ins_query="insert into users (username,password,admin) values
     ('$username','$password','$admin')";
-    mysqli_query($con,$ins_query)
-    or die(mysql_error());
+    if(mysqli_query($con,$ins_query))
     $status = "New Record Inserted Successfully.
     </br></br><a href='view.php'>View Inserted Record</a>";
-}
-?>
+    else{
+        echo mysqli_error($con);
+        $status = "Insert Failed.
+    '$username','$password', '$admin'
+    </br></br><a href='view.php'>View Inserted Record</a>";
+}}
+?>  
 <!DOCTYPE html>
 <html>
 <head>

@@ -15,7 +15,7 @@ $coordinates = $_REQUEST['coordinates'];
     (`shop_name`,`contact_person`,`contact_no`,`address`,`area`,`coordinates`)values
     ('$shop_name','$contact_person','$contact_no','$address','$area','$coordinates')";
     mysqli_query($con,$ins_query)
-    or die(mysql_error());
+    or die(mysqli_error($con));
     $status = "New Record Inserted Successfully.
     </br></br><a href='view.php'>View Inserted Record</a>";
 }
@@ -38,7 +38,7 @@ $coordinates = $_REQUEST['coordinates'];
 <input type="hidden" name="new" value="1" />
 <p><input type="text" name="shop_name" placeholder="shop_name" required /></p>
 <p><input type="text" name="contact_person" placeholder="Enter contact_person" required /></p>
-<p><input type="text" name="contact_no" placeholder="Enter contact_no" required /></p>
+<p><input type="number" name="contact_no" placeholder="Enter contact_no" required /></p>
 <p><input type="text" name="address" placeholder="Enter address" required /></p>
 <p><input type="text" name="coordinates" placeholder="Enter coordinates" required /></p>
 <p><input type="text" name="area" placeholder="Enter area" required /></p>

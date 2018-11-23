@@ -13,7 +13,7 @@ $list_of_cust = $_POST['list_of_cust'];
     ('name','contact_no','list_of_cust') values ('$name','$contact_no','$list_of_cust')";
     $status = "";
     mysqli_query($con,$ins_query)
-        or die(mysql_error());
+        or die(mysqli_error($con));
     $status = "$list_of_cust    </br></br><a href='view.php'>View Inserted Record</a>";
     
 }
