@@ -31,7 +31,7 @@ include("auth.php");
 </div>
 
 <h2 style="margin-top: 150px">View Records</h2>
-<table width="100%" border="1" style="border-collapse:collapse;">
+<table width="100%" border="1" class="w3-table-all" >
 <thead>
 <tr>
 <th><strong>product_id</strong></th>

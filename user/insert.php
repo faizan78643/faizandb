@@ -18,7 +18,7 @@ if(isset($_POST['new']) && $_POST['new']==1){
         $status = "Insert Failed.
     '$username','$password', '$admin'
     </br></br><a href='view.php'>View Inserted Record</a>";
-}}
+}}  
 ?>  
 <!DOCTYPE html>
 <html>

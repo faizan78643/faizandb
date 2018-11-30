@@ -31,6 +31,9 @@ include("auth.php");
     <div class="w3-col s3">
       <a href="./invoices/index.php" class="w3-button w3-block w3-green">INVOICES</a>
     </div>
+    <div class="w3-col s3">
+      <a href="survey.php" class="w3-button w3-block w3-green">SURVEY</a>
+    </div>
     <div class="w3-col" align="center">
     <a href="logout.php" class="del_btn";">LOGOUT</a>
     </div>
@@ -39,5 +42,6 @@ include("auth.php");
 </div>
 
 </div>
+<?php include('chart.php');?> 
 </body>
 </html>

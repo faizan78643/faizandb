@@ -36,6 +36,10 @@ body, html {
     <div class="w3-col" align="center">
     <a href="HomePage.php?logout='1'" class="del_btn";">LOGOUT</a>
     </div>
+     <div class="w3-col s3">
+      <a href="survey.php" class="w3-button w3-block w3-green">SURVEY</a>
+    </div>
+    
     
   </div>
 </div>

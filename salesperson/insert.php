@@ -4,17 +4,18 @@ include("auth.php");
 $status = "";
 if(isset($_POST['new']) && $_POST['new']==1){
     
-    $name =$_POST['name'];
-    $contact_no = $_POST['contact_no'];
-$list_of_cust = $_POST['list_of_cust'];
+    $name =$_REQUEST['name'];
+    $contact_no = $_REQUEST['contact_no'];
+$list_of_cust = $_REQUEST['list_of_cust'];
 
    // $submittedby = $_SESSION["username"];
     $ins_query="insert into salesperson
-    ('name','contact_no','list_of_cust') values ('$name','$contact_no','$list_of_cust')";
+    (`name`,`contact_no`,`list_of_cust`) values ('$name','$contact_no','$list_of_cust')";
     $status = "";
     mysqli_query($con,$ins_query)
         or die(mysqli_error($con));
-    $status = "$list_of_cust    </br></br><a href='view.php'>View Inserted Record</a>";
+    $status = "New Record Inserted Successfully.
+    </br></br><a href='view.php'>View Inserted Record</a>";
     
 }
 ?>
