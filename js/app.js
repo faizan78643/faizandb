@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$.ajax({
-		url: "http://localhost/faizandb/data.php",
+		url: "data.php",
 		method: "GET",
 		success: function(data) {//going in data.php and getting pcode and quantity, callas data.php
 			console.log(data);
